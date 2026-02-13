@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YES 💙</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0a0f3c, #2b3a90, #a78bfa);
+      overflow: hidden;
+      color: white;
+    }
+
+    .glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: rgba(167, 139, 250, 0.35);
+      filter: blur(120px);
+      top: 10%;
+      left: 10%;
+    }
+
+    .glow2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(65, 105, 225, 0.35);
+      filter: blur(140px);
+      bottom: 5%;
+      right: 10%;
+    }
+
+    .container {
+      text-align: center;
+      padding: 60px 45px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(14px);
+      box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.35);
+      max-width: 600px;
+      width: 90%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: relative;
+      z-index: 2;
+      animation: pop 0.6s ease-in-out;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.8;
+      opacity: 0.95;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 15px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="glow"></div>
+  <div class="glow2"></div>
+
+  <div class="container">
+    <div class="title">OMG YESSS 😭💙💜✨</div>
+
+    <div class="subtitle">
+      Happy Birthday once again Supraja 🎂 <br><br>
+      You just made my day.
+    </div>
+
+    <button class="btn" onclick="window.location.href='index.html'">
+      Go Back 🔙
+    </button>
+  </div>
+
+</body>
+</html>
