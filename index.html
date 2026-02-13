@@ -3,26 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Supraja 💙</title>
+  <title>my everything</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: "Poppins", sans-serif;
       background: linear-gradient(135deg, #0a0f3c, #2b3a90, #a78bfa);
       overflow: hidden;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    /* Glows */
     .glow {
       position: absolute;
       width: 450px;
@@ -32,6 +37,8 @@
       filter: blur(120px);
       top: 10%;
       left: 10%;
+      z-index: 1;
+      animation: floatGlow 6s infinite ease-in-out;
     }
 
     .glow2 {
@@ -43,20 +50,38 @@
       filter: blur(140px);
       bottom: 5%;
       right: 10%;
+      z-index: 1;
+      animation: floatGlow 7s infinite ease-in-out;
     }
 
-    .container {
-      text-align: center;
+    @keyframes floatGlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Pages wrapper */
+    .page {
+      position: absolute;
+      width: 90%;
+      max-width: 600px;
       padding: 55px 40px;
       border-radius: 22px;
       background: rgba(255, 255, 255, 0.10);
       backdrop-filter: blur(14px);
       box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.35);
-      max-width: 550px;
-      width: 90%;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      position: relative;
+      text-align: center;
       z-index: 2;
+      opacity: 0;
+      transform: scale(0.9);
+      pointer-events: none;
+      transition: 0.6s ease;
+    }
+
+    .page.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
     }
 
     .title {
@@ -141,6 +166,49 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.15); }
     }
+
+    /* Yes Page */
+    .bigText {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .btnBack {
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 15px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      transition: 0.2s;
+    }
+
+    .btnBack:hover {
+      transform: scale(1.06);
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      top: -20px;
+      opacity: 0.9;
+      border-radius: 3px;
+      animation: fall 3.5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
   </style>
 </head>
 
@@ -149,42 +217,74 @@
   <div class="glow"></div>
   <div class="glow2"></div>
 
-  <div class="container">
-    <div class="title">Happy Birthday, Supraja 💙</div>
+  <!-- PAGE 1 -->
+  <div class="page active" id="page1">
+    <div class="title">DEMM Happy Birthday jubrajaaaaa</div>
 
     <div class="subtitle">
-      Today is all about <span class="highlight">you</span>.  
+      
+      You make me the happiest person in the room everytime, you could never fail to make me feel that I matter 🫠🫢🫢
       <br><br>
-      Wishing you the happiest birthday filled with peace, laughter, and everything you love 💜✨
-      <br><br>
-      You deserve the best, always.
+      You deserve the best, always
     </div>
 
     <div class="question">
       And since today is already special…
       <br>
-      can I make it even more special? <span class="heart">💙</span>
+      can I make it even more special? <span class="heart">🤔🤯🤓🤓</span>
       <br><br>
-      Will you be my Valentine?
+      ummm here goes... will you be my Valentine? (obv answer duhhh 😘😡😡👺)
     </div>
 
     <div class="btn-container">
-      <button id="yesBtn">YES 💜</button>
-      <button id="noBtn">NO 🙃</button>
+      <button id="yesBtn">YESSS 😱</button>
+      <button id="noBtn">NOPE (cmon seriously)</button>
     </div>
 
     <div class="footer">
-      Made with love 💙
+      WTFFF IS THIS WEBSITE BRO
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page2">
+    <div class="bigText">AHHH HECK YEAA LESGOOO 😭🫠🫠🫂</div>
+
+    <div class="subtitle">
+      Happy Birthday once again... my valentine this year  <br><br>
+      Tho this is your day, you somehow made it my day #stealingyourspotlight 🥱🥱😎
+    </div>
+
+    <button class="btnBack" id="backBtn">Go Back 🔙</button>
+
+    <div class="footer">
+      YOU MATTER THE MOST TO ME
     </div>
   </div>
 
   <script>
     const noBtn = document.getElementById("noBtn");
     const yesBtn = document.getElementById("yesBtn");
+    const backBtn = document.getElementById("backBtn");
+
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+
+    function showPage2() {
+      page1.classList.remove("active");
+      page2.classList.add("active");
+      startConfetti();
+    }
+
+    function showPage1() {
+      page2.classList.remove("active");
+      page1.classList.add("active");
+      stopConfetti();
+    }
 
     noBtn.addEventListener("mouseover", () => {
-      const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-      const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+      const maxX = window.innerWidth - noBtn.offsetWidth - 30;
+      const maxY = window.innerHeight - noBtn.offsetHeight - 30;
 
       const randomX = Math.floor(Math.random() * maxX);
       const randomY = Math.floor(Math.random() * maxY);
@@ -194,8 +294,40 @@
     });
 
     yesBtn.addEventListener("click", () => {
-      window.location.href = "yes.html";
+      showPage2();
     });
+
+    backBtn.addEventListener("click", () => {
+      showPage1();
+    });
+
+    // Confetti effect
+    let confettiInterval;
+
+    function startConfetti() {
+      confettiInterval = setInterval(() => {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+        confetti.style.opacity = Math.random();
+
+        const colors = ["#4169e1", "#a78bfa", "#ffffff", "#7b2cff", "#00bfff"];
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 4000);
+      }, 120);
+    }
+
+    function stopConfetti() {
+      clearInterval(confettiInterval);
+      document.querySelectorAll(".confetti").forEach(c => c.remove());
+    }
   </script>
 
 </body>
