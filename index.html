@@ -3,213 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>my everything</title>
+  <title>Supraja's Special Day 💙</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      height: 100vh;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #0a0f3c, #2b3a90, #a78bfa);
-      overflow: hidden;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Glows */
-    .glow {
-      position: absolute;
-      width: 450px;
-      height: 450px;
-      border-radius: 50%;
-      background: rgba(167, 139, 250, 0.35);
-      filter: blur(120px);
-      top: 10%;
-      left: 10%;
-      z-index: 1;
-      animation: floatGlow 6s infinite ease-in-out;
-    }
-
-    .glow2 {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: rgba(65, 105, 225, 0.35);
-      filter: blur(140px);
-      bottom: 5%;
-      right: 10%;
-      z-index: 1;
-      animation: floatGlow 7s infinite ease-in-out;
-    }
-
-    @keyframes floatGlow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-
-    /* Pages wrapper */
-    .page {
-      position: absolute;
-      width: 90%;
-      max-width: 600px;
-      padding: 55px 40px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.10);
-      backdrop-filter: blur(14px);
-      box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      text-align: center;
-      z-index: 2;
-      opacity: 0;
-      transform: scale(0.9);
-      pointer-events: none;
-      transition: 0.6s ease;
-    }
-
-    .page.active {
-      opacity: 1;
-      transform: scale(1);
-      pointer-events: auto;
-    }
-
-    .title {
-      font-family: "Montserrat", sans-serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      font-weight: 300;
-      margin-bottom: 28px;
-      opacity: 0.95;
-      line-height: 1.7;
-    }
-
-    .highlight {
-      font-weight: 600;
-      color: white;
-    }
-
-    .question {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-top: 18px;
-      margin-bottom: 25px;
-      line-height: 1.6;
-    }
-
-    .btn-container {
-      position: relative;
-      height: 150px;
-      margin-top: 10px;
-    }
-
-    button {
-      padding: 12px 28px;
-      font-size: 16px;
-      border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: 0.2s;
-      font-family: "Poppins", sans-serif;
-    }
-
-    #yesBtn {
-      background: linear-gradient(135deg, #4169e1, #a78bfa);
-      color: white;
-      font-weight: 600;
-      box-shadow: 0px 6px 20px rgba(65, 105, 225, 0.35);
-    }
-
-    #yesBtn:hover {
-      transform: scale(1.07);
-    }
-
-    #noBtn {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: white;
-      position: absolute;
-      left: 58%;
-      top: 35%;
-      backdrop-filter: blur(10px);
-    }
-
-    .footer {
-      margin-top: 25px;
-      font-size: 0.95rem;
-      opacity: 0.8;
-      font-weight: 300;
-    }
-
-    .heart {
-      display: inline-block;
-      animation: beat 1s infinite;
-    }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15); }
-    }
-
-    /* Yes Page */
-    .bigText {
-      font-family: "Montserrat", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .btnBack {
-      margin-top: 30px;
-      padding: 12px 28px;
-      font-size: 15px;
-      border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: white;
-      transition: 0.2s;
-    }
-
-    .btnBack:hover {
-      transform: scale(1.06);
-    }
-
-    /* Confetti */
-    .confetti {
-      position: absolute;
-      width: 8px;
-      height: 14px;
-      top: -20px;
-      opacity: 0.9;
-      border-radius: 3px;
-      animation: fall 3.5s linear infinite;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(110vh) rotate(360deg); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -219,11 +19,13 @@
 
   <!-- PAGE 1 -->
   <div class="page active" id="page1">
-    <div class="title">DEMM Happy Birthday jubrajaaaaa</div>
+    <div class="title">Happy Birthday jubrajaaaaa</div>
 
     <div class="subtitle">
-      
+      Today is all about <span class="highlight">you</span> 
+      <br><br>
       You make me the happiest person in the room everytime, you could never fail to make me feel that I matter 🫠🫢🫢
+
       <br><br>
       You deserve the best, always
     </div>
@@ -233,7 +35,7 @@
       <br>
       can I make it even more special? <span class="heart">🤔🤯🤓🤓</span>
       <br><br>
-      ummm here goes... will you be my Valentine? (obv answer duhhh 😘😡😡👺)
+      here goes... will you be my Valentine? (obv answer duhhh 😘😡😡👺)
     </div>
 
     <div class="btn-container">
@@ -248,87 +50,21 @@
 
   <!-- PAGE 2 -->
   <div class="page" id="page2">
-    <div class="bigText">AHHH HECK YEAA LESGOOO 😭🫠🫠🫂</div>
+    <div class="bigText">MFGG YEAA LESGOOO BBG😭🫠🫠🫂</div>
 
     <div class="subtitle">
-      Happy Birthday once again... my valentine this year  <br><br>
-      Tho this is your day, you somehow made it my day #stealingyourspotlight 🥱🥱😎
+      Happy Birthday once again... my valentine this year <br><br>
+      Tho this is your day, you somehow made it my day #stealingyourspotlight 🥱🥱😎 <br><br>
+      jokes apart, you will always be my comfort person and I will always love you
     </div>
 
-    <button class="btnBack" id="backBtn">Go Back 🔙</button>
+    <button class="btnBack" id="backBtn">wanna experience it again</button>
 
     <div class="footer">
       YOU MATTER THE MOST TO ME
     </div>
   </div>
 
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-    const backBtn = document.getElementById("backBtn");
-
-    const page1 = document.getElementById("page1");
-    const page2 = document.getElementById("page2");
-
-    function showPage2() {
-      page1.classList.remove("active");
-      page2.classList.add("active");
-      startConfetti();
-    }
-
-    function showPage1() {
-      page2.classList.remove("active");
-      page1.classList.add("active");
-      stopConfetti();
-    }
-
-    noBtn.addEventListener("mouseover", () => {
-      const maxX = window.innerWidth - noBtn.offsetWidth - 30;
-      const maxY = window.innerHeight - noBtn.offsetHeight - 30;
-
-      const randomX = Math.floor(Math.random() * maxX);
-      const randomY = Math.floor(Math.random() * maxY);
-
-      noBtn.style.left = randomX + "px";
-      noBtn.style.top = randomY + "px";
-    });
-
-    yesBtn.addEventListener("click", () => {
-      showPage2();
-    });
-
-    backBtn.addEventListener("click", () => {
-      showPage1();
-    });
-
-    // Confetti effect
-    let confettiInterval;
-
-    function startConfetti() {
-      confettiInterval = setInterval(() => {
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti");
-
-        confetti.style.left = Math.random() * window.innerWidth + "px";
-        confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
-        confetti.style.opacity = Math.random();
-
-        const colors = ["#4169e1", "#a78bfa", "#ffffff", "#7b2cff", "#00bfff"];
-        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-          confetti.remove();
-        }, 4000);
-      }, 120);
-    }
-
-    function stopConfetti() {
-      clearInterval(confettiInterval);
-      document.querySelectorAll(".confetti").forEach(c => c.remove());
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
