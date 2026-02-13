@@ -30,28 +30,25 @@ function moveNoButton() {
   noBtn.style.top = randomY + "px";
 }
 
-/* Works for laptop hover */
-noBtn.addEventListener("mouseenter", moveNoButton);
 
-/* Works for mobile touch */
+noBtn.addEventListener("mouseenter", moveNoButton);
 noBtn.addEventListener("touchstart", (e) => {
   e.preventDefault();
   moveNoButton();
 });
 
-/* If she tries to click */
 noBtn.addEventListener("click", (e) => {
   e.preventDefault();
   moveNoButton();
 });
 
-/* YES button */
+
 yesBtn.addEventListener("click", showPage2);
 
-/* Back button */
+
 backBtn.addEventListener("click", showPage1);
 
-/* Confetti effect */
+
 function startConfetti() {
   confettiInterval = setInterval(() => {
     const confetti = document.createElement("div");
