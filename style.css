@@ -24,7 +24,6 @@ body {
 }
 
 
-/* Glows */
 .glow {
   position: absolute;
   width: 450px;
@@ -56,7 +55,7 @@ body {
   50% { transform: translateY(-20px); }
 }
 
-/* Page */
+
 .page {
   position: absolute;
   width: 90%;
@@ -192,7 +191,7 @@ button {
   transform: scale(1.06);
 }
 
-/* Confetti */
+
 .confetti {
   position: absolute;
   width: 8px;
@@ -209,7 +208,6 @@ button {
 }
 
 
-/* Glows */
 .glow {
   position: absolute;
   width: 450px;
@@ -241,7 +239,7 @@ button {
   50% { transform: translateY(-20px); }
 }
 
-/* Page */
+
 .page {
   position: absolute;
   width: 90%;
@@ -350,7 +348,7 @@ button {
   50% { transform: scale(1.15); }
 }
 
-/* Page 2 */
+
 .bigText {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
@@ -377,7 +375,7 @@ button {
   transform: scale(1.06);
 }
 
-/* Confetti */
+
 .confetti {
   position: absolute;
   width: 8px;
